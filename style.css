@@ -1,0 +1,99 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Georgia, serif;
+    background: black;
+}
+
+#background {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: -1;
+
+    animation: bgPulse 8s infinite alternate;
+}
+
+@keyframes bgPulse {
+
+    from {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    to {
+        transform: scale(1.03);
+        filter: brightness(1.2);
+    }
+
+}
+
+#game {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#textbox {
+    width: 450px;
+    min-height: 80px;
+
+    padding: 12px 16px;
+
+    margin-bottom: 15px;
+
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid white;
+
+    color: white;
+
+    font-size: 18px;
+    text-align: center;
+
+    line-height: 1.3;
+}
+
+#character {
+    width: 550px;
+    height: auto;
+
+    cursor: pointer;
+
+    transition: transform 0.2s, filter 0.2s;
+}
+
+#character:hover {
+
+    transform: scale(1.03);
+
+    filter: brightness(1.1);
+}
+
+#upgradeButton {
+
+    margin-top: 25px;
+
+    padding: 15px 35px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+#pointsDisplay {
+    color: white;
+}
